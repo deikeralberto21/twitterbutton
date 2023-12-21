@@ -2,10 +2,13 @@ import { useState } from 'react'
 import './index.css'
 
 
-export function CardInfo({username, fullName, following}) {
-
+export function CardInfo({username, fullName}) {
+  const [following, setFollow]= useState(false)
+  function followEvent(){
+    setFollow(!following)
+  }
   const textButton = following ? 'siguiendo' : 'seguir';
-  const classButton = following ? 'button-Notfollow' :'button-follow'  
+  const classButton = following ? 'button button-follow' :'button'  
   return (
     <article className='follow-card'>
       <header>
@@ -16,7 +19,7 @@ export function CardInfo({username, fullName, following}) {
         </div>
       </header>
         <aside className='follow-button-container'>
-          <button className={classButton}>{textButton}</button>
+          <button className={classButton} onClick={followEvent}>{textButton}</button>
         </aside>
     </article>
  )

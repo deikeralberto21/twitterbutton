@@ -7,8 +7,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <>
-    <CardInfo username="deikeralberto21" following={false} fullName="Deiker"/>
-    <CardInfo username="elisandrotrespiernas" following={true} fullName="Elisandro"/>
-    <CardInfo username="nate" following={false} fullName="juan"/>
+    <CardInfo username="deikeralberto21" fullName="Deiker"/>
+    <CardInfo username="elisandrotrespiernas" fullName="Elisandro"/>
+    <CardInfo username="nate" fullName="juan"/>
   </>
 )
